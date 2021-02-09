@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const ta = new TweenTextAnimation('.animate-title');
+    ta.animate();
+
+});
 class TextAnimation {
     constructor(el) {
         this.DOM = {};
@@ -20,7 +25,7 @@ class TweenTextAnimation extends TextAnimation {
         super(el);
         this.DOM.chars = this.DOM.el.querySelectorAll('.char');
     }
-    
+
     animate() {
         this.DOM.el.classList.add('inview');
         this.DOM.chars.forEach((c, i) => {

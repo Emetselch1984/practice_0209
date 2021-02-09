@@ -1,3 +1,12 @@
+@import "mixin";
+
+html {
+  font-family: "Teko", sans-serif;
+}
+
+body {
+  margin: 0;
+}
 
 section {
   position: relative;
@@ -45,7 +54,7 @@ section {
 
   @for $i from 1 through 30 {
     &:nth-child(#{$i}) {
-      animation-delay: $i * 0.1s;
+      animation-delay: $i * 0.04s;
     }
   }
 }
@@ -61,4 +70,3 @@ section {
     transform: translateY(0);
   }
 }
-
