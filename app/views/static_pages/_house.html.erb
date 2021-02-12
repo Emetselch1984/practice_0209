@@ -1,0 +1,17 @@
+<section class="house">
+  <div>
+    <h2 class="main-title tween-animate-title ">Find Your House</h2>
+    <p class="sub-title tween-animate-title ">お気に入りの宿泊先を見つけましょう</p>
+  </div>
+  <div class="houses__inner">
+    <div class="houses__item">
+      <div class="cover-slide hover-darken">
+        <%= image_tag 'villa-1.jpg',class:'bg-img-zoom img-bg50' %>
+      </div>
+      <p class="houses__title">House 1</p>
+    </div>
+  </div>
+</section>
+<%= javascript_pack_tag 'vendors/gsap' %>
+<%= javascript_pack_tag 'vendors/scroll-polyfill' %>
+<%= javascript_pack_tag 'libs/scroll-text-animation' %>

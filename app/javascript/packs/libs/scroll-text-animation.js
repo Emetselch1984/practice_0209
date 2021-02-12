@@ -1,13 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const cb = function (el, isIntersecting) {
-        if(isIntersecting) {
-            const ta = new TextAnimation(el);
+    const cbA = function (el, inview) {
+        if(inview) {
+            const ta = new TweenTextAnimation(el);
             ta.animate();
         }
     }
+    const cbB = function (el,inview){
+        if(inview) {
+            el.classList.add('inview');
+        }else {
+            el.classList.remove('inview');
+        }
+    }
 
-    const so = new ScrollObserver('.animate-title', cb);
+    const soA = new ScrollObserver('.tween-animate-title', cbA);
+    const soB = new ScrollObserver('.cover-slide', cbB);
 });
 class TextAnimation {
     constructor(el) {
